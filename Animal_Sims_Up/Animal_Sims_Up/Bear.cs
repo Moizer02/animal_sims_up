@@ -50,17 +50,16 @@ namespace Animal_Sims_Up
 
         public override void Logic()
         {
-            Math.Clamp(--food, 0, 100);
-            Math.Clamp(--drink, 0, 100);
-            Math.Clamp(--sleep, 0, 100);
-            Trace.WriteLine($"{food}, {drink}, {sleep}");
+            food--;
+            drink--;
+            sleep--;
 
             ((ProgressBar)Global.GamePage.FindName($"EatBar{Slot}")).Value = food;
             ((ProgressBar)Global.GamePage.FindName($"DrinkBar{Slot}")).Value = drink;
             ((ProgressBar)Global.GamePage.FindName($"SleepBar{Slot}")).Value = sleep;
 
-            //health = 100 * (1 - (food + drink + sleep) / (100 ^ 3));
-            health = 100 * ((food * drink * sleep) / 3);
+            health = Math.Min(100, Math.Max(0, (food + drink + sleep - 100) * 0.5));
+            Trace.WriteLine($"Food:{food}, Drink:{drink}, Sleep:{sleep}, Health:{health}");
             ((ProgressBar)Global.GamePage.FindName($"HealthBar{Slot}")).Value = health;
         }
     }

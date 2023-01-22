@@ -7,10 +7,10 @@
         public string FoodName = "";
         public int FoodAmount;
         public int Slot;
-        protected int food = 100;
-        protected int drink = 100;
-        protected int sleep = 100;
-        protected int health = 100;
+        protected double food = 100;
+        protected double drink = 100;
+        protected double sleep = 100;
+        protected double health = 100;
         public abstract void Drink();
         public abstract void Eat();
         public abstract void Sleep();
