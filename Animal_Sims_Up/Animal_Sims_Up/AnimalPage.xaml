@@ -1,0 +1,153 @@
+﻿<Page x:Class="Animal_Sims_Up.AnimalPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Animal_Sims_Up"
+      mc:Ignorable="d"
+      d:DesignWidth="1000"
+      d:DesignHeight="640"
+      Background="Transparent"
+      Title="AnimalPage">
+
+    <Page.Resources>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="20"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"
+              Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Rectangle RadiusX="50"
+                       RadiusY="50"
+                       Fill="#02ffff"
+                       Opacity=".15"
+                       Margin="10"
+                       Grid.Row="0"/>
+            <TextBlock Text="Animal"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontSize="80"/>
+            <ComboBox x:Name="AnimalDropdown"
+                      Grid.Row="1"
+                      Margin="20"
+                      Width="400"
+                      FontSize="25"
+                      Height="40"
+                      SelectionChanged="AnimalDropdown_SelectionChanged"/>
+        </Grid>
+        <Grid Grid.Row="0"
+              Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Rectangle RadiusX="50"
+                       RadiusY="50"
+                       Fill="LightBlue"
+                       Opacity=".15"
+                       Margin="10"
+                       Grid.Row="0"/>
+            <TextBlock Text="Name"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontSize="80"/>
+            <TextBox x:Name="NameBox"
+                     Grid.Row="1"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     Width="400"
+                     Height="60"
+                     FontSize="45"
+                     MaxLength="10"
+                     TextAlignment="Center"
+                     Background="Transparent"
+                     Foreground="White" TextChanged="NameBox_TextChanged"/>
+        </Grid>
+        <Grid Grid.Row="1"
+              Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Rectangle RadiusX="50"
+                       RadiusY="50"
+                       Fill="LightBlue"
+                       Opacity=".15"
+                       Margin="10"
+                       Grid.Row="0"/>
+            <TextBlock Text="Age"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontSize="80"/>
+            <Slider x:Name="AgeSlider"
+                    Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Width="300"
+                    SmallChange="1"
+                    Value="1"
+                    Minimum="1"
+                    Maximum="10"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="1"/>
+            <TextBlock x:Name="AgeViewer"
+                       Grid.Row="1"
+                       Margin="0,0,30,0"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"
+                       Text="{Binding ElementName=AgeSlider, Path=Value}"
+                       Foreground="White"
+                       FontSize="30"/>
+        </Grid>
+        <Grid Grid.Row="1"
+              Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Rectangle RadiusX="50"
+                       RadiusY="50"
+                       Fill="LightBlue"
+                       Opacity=".15"
+                       Margin="10"
+                       Grid.Row="0"/>
+            <TextBlock Text="Create"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontSize="80"/>
+            <Button x:Name="CreateAnimal"
+                    Grid.Row="1"
+                    Width="300"
+                    Height="40"
+                    Content="Create"
+                    FontSize="25"
+                    Click="CreateAnimal_Click"
+                    IsEnabled="False"/>
+        </Grid>
+    </Grid>
+</Page>

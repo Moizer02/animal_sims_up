@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Animal.png" />
+    <None Remove="bear.png" />
+    <None Remove="drink.png" />
+    <None Remove="food.png" />
+    <None Remove="giraffe.png" />
+    <None Remove="health.png" />
+    <None Remove="home.png" />
+    <None Remove="lion.png" />
+    <None Remove="monkey.png" />
+    <None Remove="pig.png" />
+    <None Remove="plus.png" />
+    <None Remove="shop.png" />
+    <None Remove="sleep.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Animal.png" />
+    <Resource Include="bear.png" />
+    <Resource Include="drink.png" />
+    <Resource Include="food.png" />
+    <Resource Include="giraffe.png" />
+    <Resource Include="health.png" />
+    <Resource Include="home.png" />
+    <Resource Include="lion.png" />
+    <Resource Include="monkey.png" />
+    <Resource Include="pig.png" />
+    <Resource Include="plus.png" />
+    <Resource Include="shop.png" />
+    <Resource Include="sleep.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
