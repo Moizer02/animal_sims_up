@@ -1,0 +1,80 @@
+table {
+  border-collapse: collapse;
+  border: 3px solid black;
+  background: linear-gradient(to right bottom, rgb(255, 0, 0), rgb(84, 20, 189)) no-repeat center fixed;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.42857143;
+  background-color: rgb(78, 75, 75);
+}
+
+th {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  font-size: 25px;
+}
+
+td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(62, 7, 107);
+  border: 3px solid black;
+  border-radius: 1vh;
+}
+
+code {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  color: red;
+  background-color: black;
+  border-radius: 1vh;
+  font-weight: bold;
+}
+
+code::before {
+  content: "\00a0";
+}
+
+code::after {
+  content: "\00a0";
+}
+
+.var {
+  color: rgb(76, 108, 214);
+}
+
+.class {
+  color: rgb(10, 255, 10);
+}
+
+.public::before {
+  content: "+\00a0";
+  color: rgb(0, 255, 0);
+}
+
+.private::before {
+  content: "\00a0-\00a0";
+  color: rgb(255, 0, 0);
+}
+
+.protected::before {
+  content: "#\00a0";
+  color: rgb(255, 255, 0);
+}
+
+.abstract {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}

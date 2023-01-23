@@ -6,14 +6,14 @@
       <HashCode>CAAAAAAAAAEAAAMIAEgBEAAAAQAAIAAEoAAAAAAAAIo=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Animal_Sims_Up.Animal">
+  <Class Name="Animal_Sims_Up.Animal" Collapsed="true">
     <Position X="11.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAEwgAAAEIAEAAAAQAAAAAIAQAACAAAAAAAgo=</HashCode>
       <FileName>Animal.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Animal_Sims_Up.AnimalPage" BaseTypeListCollapsed="true">
+  <Class Name="Animal_Sims_Up.AnimalPage" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="21.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABAAAAAQCAAAAAAAIAAAAAAAACAAAAAAA=</HashCode>
@@ -28,14 +28,14 @@
       <FileName>App.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Animal_Sims_Up.Bear">
+  <Class Name="Animal_Sims_Up.Bear" Collapsed="true">
     <Position X="6.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEQgAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAAA=</HashCode>
       <FileName>Bear.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Animal_Sims_Up.GamePage" BaseTypeListCollapsed="true">
+  <Class Name="Animal_Sims_Up.GamePage" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="21.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACABwAAAGkAAAAAAAA=</HashCode>
@@ -43,28 +43,28 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Animal_Sims_Up.Giraffe">
+  <Class Name="Animal_Sims_Up.Giraffe" Collapsed="true">
     <Position X="13.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEQgAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAAA=</HashCode>
       <FileName>Giraffe.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Animal_Sims_Up.Global">
+  <Class Name="Animal_Sims_Up.Global" Collapsed="true">
     <Position X="18.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQCAAAAAMAAAACAAAAAAAAAAAAAAAAIE=</HashCode>
       <FileName>Global.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Animal_Sims_Up.Lion">
+  <Class Name="Animal_Sims_Up.Lion" Collapsed="true">
     <Position X="9" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEQgAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAAA=</HashCode>
       <FileName>Lion.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Animal_Sims_Up.MainWindow" BaseTypeListCollapsed="true">
+  <Class Name="Animal_Sims_Up.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="20" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -72,7 +72,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Animal_Sims_Up.ManageAnimal" BaseTypeListCollapsed="true">
+  <Class Name="Animal_Sims_Up.ManageAnimal" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="20" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AASAAAAAAAAAAAAAABAAAAAAAAAgAAQAAAACAAAAAAA=</HashCode>
@@ -80,21 +80,21 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Animal_Sims_Up.Monkey">
+  <Class Name="Animal_Sims_Up.Monkey" Collapsed="true">
     <Position X="15.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEQgAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAAA=</HashCode>
       <FileName>Monkey.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Animal_Sims_Up.Pig">
+  <Class Name="Animal_Sims_Up.Pig" Collapsed="true">
     <Position X="11.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEQgAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAAA=</HashCode>
       <FileName>Pig.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Animal_Sims_Up.ShopPage" BaseTypeListCollapsed="true">
+  <Class Name="Animal_Sims_Up.ShopPage" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="18.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAAAAAgAAQAAAAAAAAAAAAAACAAgAAIgAAAAA=</HashCode>

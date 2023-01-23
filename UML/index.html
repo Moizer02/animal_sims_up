@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>UML Klassendiagramm</title>
+</head>
+
+<body>
+    <h1>Mir ist bewusst, dass Vererbungen mit Pfeilen auf die Mutterklasse zeigen müssen, aber hier in HTML wusste ich dies nicht umzusetzen</h1>
+    <link>Hier ist der GitHub Link: <a href="https://github.com/TjavenTolstrup/animal_sims_up" target="_blank"> GitHub Repository</a></h3>
+    <table>
+        <tr>
+            <th class="abstract">Animal</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li class="public">Age : <code class="var">int</code></li>
+                    <li class="public">drink : <code class="var">double</code></li>
+                    <li class="public">food : <code class="var">double</code></li>
+                    <li class="public">FoodName : <code class="var">string</code></li>
+                    <li class="public">health : <code class="var">double</code></li>
+                    <li class="public">Name : <code class="var">string</code></li>
+                    <li class="public">sleep : <code class="var">double</code></li>
+                    <li class="public">Slot : <code class="var">int</code></li>
+                    <li class="public">Source : <code class="var">string</code></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li class="public">Alive() : <code class="var">bool</code></li>
+                    <li class="public abstract">Drink() : <code class="var">void</code></li>
+                    <li class="public abstract">Eat() : <code class="var">void</code></li>
+                    <li class="public">Logic() : <code class="var">void</code></li>
+                    <li class="public abstract">Sleep() : <code class="var">void</code></li>
+                    <li class="public abstract">Speak() : <code class="var">void</code></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <table>
+        <tr>
+            <th>Bear : Animal</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <u>
+                        <li class="public">MaxAge : <code class="var">int</code></li>
+                    </u>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li class="public">Bear(_name : <code class="var">string</code>, _age : <code
+                            class="var">int</code>, _slot : <code class="var">int</code>) : <code
+                            class="var">bool</code></li>
+                    <li class="public bold">Drink() : <code class="var">void</code></li>
+                    <li class="public bold">Eat() : <code class="var">void</code></li>
+                    <li class="public bold">Sleep() : <code class="var">void</code></li>
+                    <li class="public bold">Speak() : <code class="var">void</code></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <table>
+        <tr>
+            <th>Lion : Animal</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <u>
+                        <li class="public">MaxAge : <code class="var">int</code></li>
+                    </u>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li class="public bold">Drink() : <code class="var">void</code></li>
+                    <li class="public bold">Eat() : <code class="var">void</code></li>
+                    <li class="public">Lion(_name : <code class="var">string</code>, _age : <code
+                            class="var">int</code>, _slot : <code class="var">int</code>) : <code
+                            class="var">bool</code></li>
+                    <li class="public bold">Sleep() : <code class="var">void</code></li>
+                    <li class="public bold">Speak() : <code class="var">void</code></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <table>
+        <tr>
+            <th>Pig : Animal</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <u>
+                        <li class="public">MaxAge : <code class="var">int</code></li>
+                    </u>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li class="public bold">Drink() : <code class="var">void</code></li>
+                    <li class="public bold">Eat() : <code class="var">void</code></li>
+                    <li class="public">Pig(_name : <code class="var">string</code>, _age : <code class="var">int</code>,
+                        _slot : <code class="var">int</code>) : <code class="var">bool</code></li>
+                    <li class="public bold">Sleep() : <code class="var">void</code></li>
+                    <li class="public bold">Speak() : <code class="var">void</code></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <table>
+        <tr>
+            <th>Giraffe : Animal</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <u>
+                        <li class="public">MaxAge : <code class="var">int</code></li>
+                    </u>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li class="public bold">Drink() : <code class="var">void</code></li>
+                    <li class="public bold">Eat() : <code class="var">void</code></li>
+                    <li class="public">Giraffe(_name : <code class="var">string</code>, _age : <code
+                            class="var">int</code>, _slot : <code class="var">int</code>) : <code
+                            class="var">bool</code></li>
+                    <li class="public bold">Sleep() : <code class="var">void</code></li>
+                    <li class="public bold">Speak() : <code class="var">void</code></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <table>
+        <tr>
+            <th>Monkey : Animal</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <u>
+                        <li class="public">MaxAge : <code class="var">int</code></li>
+                    </u>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li class="public bold">Drink() : <code class="var">void</code></li>
+                    <li class="public bold">Eat() : <code class="var">void</code></li>
+                    <li class="public">Monkey(_name : <code class="var">string</code>, _age : <code
+                            class="var">int</code>, _slot : <code class="var">int</code>) : <code
+                            class="var">bool</code></li>
+                    <li class="public bold">Sleep() : <code class="var">void</code></li>
+                    <li class="public bold">Speak() : <code class="var">void</code></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <table>
+        <tr>
+            <th>Global</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <u>
+                        <li class="public">AnimalDict : <code class="class">Dictionary<<code class="var">int</code>,<code class="class">Animal</code>></code></li>
+                    </u>
+                    <u>
+                        <li class="public">Currency : <code class="var">int</code></li>
+                    </u>
+                    <u>
+                        <li class="public">FoodAmount : <code class="class">Dictionary<<code class="var">string</code>,<code class="var">int</code>></code></li>
+                    </u>
+                    <u>
+                        <li class="public">GamePage : <code class="class">GamePage</code></li>
+                    </u>
+                    <u>
+                        <li class="public">GameTimer : <code class="class">DispatcherTimer</code></li>
+                    </u>
+                    <u>
+                        <li class="public">MainWindow : <code class="class">MainWindow</code></li>
+                    </u>
+                    <u>
+                        <li class="public">manageAnimal : <code class="class">ManageAnimal</code></li>
+                    </u>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <table>
+        <tr>
+            <th>MainWindow</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li class="private">CloseButton_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">Game_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="public">MainWindow()</li>
+                    <li class="private">Shop_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <table>
+        <tr>
+            <th>AnimalPage</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <u>
+                        <li class="private">slot : <code class="var">int</code></li>
+                    </u>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li class="private">AnimalDropdown_SelectionChanged(sender : <code class="class">object</code>, e : <code class="class">SelectionChangedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="public">AnimalPage(_slot : <code class="var">int</code>)</li>
+                    <li class="private">CreateAnimal_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">CreateIsValid() : <code class="var">bool</code></li>
+                    <li class="private">NameBox_TextChanged(sender : <code class="class">object</code>, e : <code class="class">TextChangedEventArgs</code>) : <code class="var">void</code></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <table>
+        <tr>
+            <th>ShopPage</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li class="private">ButtonBuyBanana_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">ButtonBuyBeef_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">ButtonBuyFish_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">ButtonBuyLeaf_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">ButtonBuyWater_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">ButtonBuyWheat_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="public">EnoughMoney(_price : <code class="var">int</code>) : <code class="var">bool</code></li>
+                    <li class="public">ShopPage()</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <table>
+        <tr>
+            <th>ManageAnimal</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <u>
+                        <li class="private">animal : <code class="class">Animal</code></li>
+                        <li class="private">slot : <code class="var">int</code></li>
+                    </u>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li class="private">Feed_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="public">ManageAnimal(_slot : <code class="var">int</code>)</li>
+                    <li class="private">Sleep_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="public">Update() : <code class="var">void</code></li>
+                    <li class="private">Water_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <table>
+        <tr>
+            <th>GamePage</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li class="private">AnimalButton1_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">AnimalButton2_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">AnimalButton3_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">AnimalButton4_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="public">GamePage()</li>    
+                    <li class="private">GameTick(sender : <code class="class">object</code>, e : <code class="class">EventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">ManageAnimal1_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">ManageAnimal2_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">ManageAnimal3_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                    <li class="private">ManageAnimal4_Click(sender : <code class="class">object</code>, e : <code class="class">RoutedEventArgs</code>) : <code class="var">void</code></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
