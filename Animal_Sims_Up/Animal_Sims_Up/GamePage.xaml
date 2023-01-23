@@ -356,7 +356,7 @@
                    Height="110"
                    Width="110"/>
         </Button>
-        
+
         <Button x:Name="AnimalButton2"
                 Style="{StaticResource RoundedButtonStyle}"
                 Grid.Row="1"
@@ -371,7 +371,7 @@
                    Height="110"
                    Width="110"/>
         </Button>
-        
+
         <Button x:Name="AnimalButton3"
                 Style="{StaticResource RoundedButtonStyle}"
                 Grid.Row="1"
@@ -386,7 +386,7 @@
                    Height="110"
                    Width="110"/>
         </Button>
-        
+
         <Button x:Name="AnimalButton4"
                 Style="{StaticResource RoundedButtonStyle}"
                 Grid.Row="1"
@@ -401,5 +401,129 @@
                    Height="110"
                    Width="110"/>
         </Button>
+        <Grid x:Name="AnimalInfo1"
+              Grid.Row="2"
+              Grid.Column="0"
+              Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Margin="5"
+                    Grid.Row="0"
+                    BorderThickness="3"
+                    CornerRadius="10"
+                    Background="Transparent"
+                    BorderBrush="White">
+                <TextBlock x:Name="AnimalInfoBox1"
+                           Margin="5"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           FontSize="25"
+                           Foreground="White">
+                </TextBlock>
+            </Border>
+            <Button x:Name="ManageAnimal1"
+                    Style="{StaticResource RoundedButtonStyle}"
+                    Grid.Row="1"
+                    Width="200"
+                    Height="40"
+                    FontSize="25"
+                    Content="Manage"
+                    Click="ManageAnimal1_Click"/>
+        </Grid>
+        <Grid x:Name="AnimalInfo2"
+              Grid.Row="2"
+              Grid.Column="1"
+              Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Margin="5"
+                    Grid.Row="0"
+                    BorderThickness="3"
+                    CornerRadius="10"
+                    Background="Transparent"
+                    BorderBrush="White">
+                <TextBlock x:Name="AnimalInfoBox2"
+                           Margin="5"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           FontSize="25"
+                           Foreground="White">
+                </TextBlock>
+            </Border>
+            <Button x:Name="ManageAnimal2"
+                    Style="{StaticResource RoundedButtonStyle}"
+                    Grid.Row="1"
+                    Width="200"
+                    Height="40"
+                    FontSize="25"
+                    Content="Manage"
+                    Click="ManageAnimal2_Click"/>
+        </Grid>
+        <Grid x:Name="AnimalInfo3"
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Margin="5"
+                    Grid.Row="0"
+                    BorderThickness="3"
+                    CornerRadius="10"
+                    Background="Transparent"
+                    BorderBrush="White">
+                <TextBlock x:Name="AnimalInfoBox3"
+                           Margin="5"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           FontSize="25"
+                           Foreground="White">
+                </TextBlock>
+            </Border>
+            <Button x:Name="ManageAnimal3"
+                    Style="{StaticResource RoundedButtonStyle}"
+                    Grid.Row="1"
+                    Width="200"
+                    Height="40"
+                    FontSize="25"
+                    Content="Manage"
+                    Click="ManageAnimal3_Click"/>
+        </Grid>
+        <Grid x:Name="AnimalInfo4"
+                          Grid.Row="2"
+                          Grid.Column="3"
+                          Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Margin="5"
+                                Grid.Row="0"
+                                BorderThickness="3"
+                                CornerRadius="10"
+                                Background="Transparent"
+                                BorderBrush="White">
+                <TextBlock x:Name="AnimalInfoBox4"
+                           Margin="5"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           FontSize="25"
+                           Foreground="White">
+                </TextBlock>
+            </Border>
+            <Button x:Name="ManageAnimal4"
+                    Style="{StaticResource RoundedButtonStyle}"
+                    Grid.Row="1"
+                    Width="200"
+                    Height="40"
+                    FontSize="25"
+                    Content="Manage"
+                    Click="ManageAnimal4_Click"/>
+        </Grid>
     </Grid>
 </Page>

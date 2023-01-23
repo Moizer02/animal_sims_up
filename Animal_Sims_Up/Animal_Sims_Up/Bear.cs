@@ -18,49 +18,38 @@ namespace Animal_Sims_Up
             Age = _age;
             Slot = _slot;
             FoodName = "Fish";
-            //Global.FoodNames.Add("Bear", "Fish");
         }
         public static int MaxAge = 25;
 
-        public override void Sleep()
-        {
-            sleep += 1;
-        }
-
         public override void Drink()
         {
+            if (Global.FoodAmount["Water"] <= 0)
+                return;
+            Global.FoodAmount["Water"]--;
+
             drink += 20;
-            Math.Clamp(drink, 0, 100);
+            drink = Math.Clamp(drink, 0, 100);
         }
 
         public override void Eat()
         {
-            if (FoodAmount <= 0)
+            if (Global.FoodAmount[$"{FoodName}"] <= 0)
                 return;
+            Global.FoodAmount[$"{FoodName}"]--;
 
-            food += 20;
-            Math.Clamp(food, 0, 100);
-
-            FoodAmount -= 1;
+            food += 25;
+            food = Math.Clamp(food, 0, 100);
         }
+
+        public override void Sleep()
+        {
+            sleep += 5;
+            sleep = Math.Clamp(sleep, 0, 100);
+        }
+
         public override void Speak()
         {
             throw new NotImplementedException();
-        }
-
-        public override void Logic()
-        {
-            food--;
-            drink--;
-            sleep--;
-
-            ((ProgressBar)Global.GamePage.FindName($"EatBar{Slot}")).Value = food;
-            ((ProgressBar)Global.GamePage.FindName($"DrinkBar{Slot}")).Value = drink;
-            ((ProgressBar)Global.GamePage.FindName($"SleepBar{Slot}")).Value = sleep;
-
-            health = Math.Min(100, Math.Max(0, (food + drink + sleep - 100) * 0.5));
-            Trace.WriteLine($"Food:{food}, Drink:{drink}, Sleep:{sleep}, Health:{health}");
-            ((ProgressBar)Global.GamePage.FindName($"HealthBar{Slot}")).Value = health;
         }
     }
 }

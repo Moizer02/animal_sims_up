@@ -11,13 +11,19 @@ namespace Animal_Sims_Up
     {
         public static MainWindow? MainWindow;
         public static GamePage GamePage = new();
+        public static ManageAnimal? manageAnimal;
         public static Dictionary<int, Animal> AnimalDict = new();
-        public static Dictionary<string, string> FoodNames = new();
+        public static Dictionary<string, int> FoodAmount = new()
+        {
+            {"Water", 0},
+            {"Fish", 0},
+            {"Beef", 0},
+            {"Banana", 0},
+            {"Wheat", 0},
+            {"Leaf", 0},
+        };
         public static DispatcherTimer? GameTimer;
-        //"Fish",
-        //"Wheat",
-        //"Leaf",
-        //"Banana",
-        //"Beef"
+
+        public static int Currency = 10;
     }
 }

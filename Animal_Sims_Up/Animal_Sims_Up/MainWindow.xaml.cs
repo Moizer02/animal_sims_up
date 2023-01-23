@@ -35,5 +35,10 @@ namespace Animal_Sims_Up
             NavigationFrame.Content = Global.GamePage;
             Global.GamePage.GameGrid.Visibility = Visibility.Visible;
         }
+
+        private void Shop_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationFrame.Content = new ShopPage();
+        }
     }
 }

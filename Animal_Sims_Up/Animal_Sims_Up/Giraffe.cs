@@ -8,40 +8,42 @@ namespace Animal_Sims_Up
 {
     internal class Giraffe : Animal
     {
-        public Giraffe(string _name, int _age)
+        public Giraffe(string _name, int _age, int _slot)
         {
             Name = _name;
             Age = _age;
+            Slot = _slot;
+            FoodName = "Leaf";
         }
         public static int MaxAge = 30;
 
-        public override void Sleep()
-        {
-            sleep += 1;
-        }
-
         public override void Drink()
         {
-            drink += 20;
-            Math.Clamp(drink, 0, 100);
+            if (Global.FoodAmount["Water"] <= 0)
+                return;
+            Global.FoodAmount["Water"]--;
+
+            drink += 15;
+            drink = Math.Clamp(drink, 0, 100);
         }
 
         public override void Eat()
         {
-            if (FoodAmount <= 0)
+            if (Global.FoodAmount[$"{FoodName}"] <= 0)
                 return;
+            Global.FoodAmount[$"{FoodName}"]--;
 
-            food += 20;
-            Math.Clamp(food, 0, 100);
-
-            FoodAmount -= 1;
+            food += 10;
+            food = Math.Clamp(food, 0, 100);
         }
-        public override void Speak()
+
+        public override void Sleep()
         {
-            throw new NotImplementedException();
+            sleep += 5;
+            sleep = Math.Clamp(sleep, 0, 100);
         }
 
-        public override void Logic()
+        public override void Speak()
         {
             throw new NotImplementedException();
         }

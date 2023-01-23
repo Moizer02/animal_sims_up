@@ -8,34 +8,42 @@ namespace Animal_Sims_Up
 {
     class Monkey : Animal
     {
-        public Monkey(string _name, int _age)
+        public Monkey(string _name, int _age, int _slot)
         {
             Name = _name;
             Age = _age;
+            Slot = _slot;
+            FoodName = "Banana";
         }
         public static int MaxAge = 40;
 
         public override void Drink()
         {
-            throw new NotImplementedException();
+            if (Global.FoodAmount["Water"] <= 0)
+                return;
+            Global.FoodAmount["Water"]--;
+
+            drink += 15;
+            drink = Math.Clamp(drink, 0, 100);
         }
 
         public override void Eat()
         {
-            throw new NotImplementedException();
+            if (Global.FoodAmount[$"{FoodName}"] <= 0)
+                return;
+            Global.FoodAmount[$"{FoodName}"]--;
+
+            food += 10;
+            food = Math.Clamp(food, 0, 100);
         }
 
         public override void Sleep()
         {
-            throw new NotImplementedException();
+            sleep += 25;
+            sleep = Math.Clamp(sleep, 0, 100);
         }
 
         public override void Speak()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Logic()
         {
             throw new NotImplementedException();
         }

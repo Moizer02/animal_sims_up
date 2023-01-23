@@ -59,19 +59,19 @@ namespace Animal_Sims_Up
             switch (selectedType.Name)
             {
                 case nameof(Lion):
-                    Global.AnimalDict.Add(slot, new Lion(NameBox.Text, (int)AgeSlider.Value));
+                    Global.AnimalDict.Add(slot, new Lion(NameBox.Text, (int)AgeSlider.Value, slot));
                     break;
                 case nameof(Monkey):
-                    Global.AnimalDict.Add(slot, new Monkey(NameBox.Text, (int)AgeSlider.Value));
+                    Global.AnimalDict.Add(slot, new Monkey(NameBox.Text, (int)AgeSlider.Value, slot));
                     break;
                 case nameof(Bear):
                     Global.AnimalDict.Add(slot, new Bear(NameBox.Text, (int)AgeSlider.Value, slot));
                     break;
                 case nameof(Giraffe):
-                    Global.AnimalDict.Add(slot, new Giraffe(NameBox.Text, (int)AgeSlider.Value));
+                    Global.AnimalDict.Add(slot, new Giraffe(NameBox.Text, (int)AgeSlider.Value, slot));
                     break;
                 case nameof(Pig):
-                    Global.AnimalDict.Add(slot, new Pig(NameBox.Text, (int)AgeSlider.Value));
+                    Global.AnimalDict.Add(slot, new Pig(NameBox.Text, (int)AgeSlider.Value, slot));
                     break;
                 default:
                     break;
@@ -80,7 +80,11 @@ namespace Animal_Sims_Up
             Global.MainWindow.NavigationFrame.Content = Global.GamePage;
             ((Button)Global.GamePage.FindName($"AnimalButton{slot}")).Visibility = Visibility.Collapsed;
             ((Grid)Global.GamePage.FindName($"AnimalGrid{slot}")).Visibility = Visibility.Visible;
-            ((Image)Global.GamePage.FindName(($"AnimalImage{slot}"))).Source = new BitmapImage(new Uri($"pack://application:,,,/{selectedType.Name.ToLower()}.png"));
+            Global.AnimalDict[slot].Source = $"pack://application:,,,/{selectedType.Name.ToLower()}.png";
+            ((Image)Global.GamePage.FindName(($"AnimalImage{slot}"))).Source = new BitmapImage(new Uri(Global.AnimalDict[slot].Source));
+
+            ((Grid)Global.GamePage.FindName($"AnimalInfo{slot}")).Visibility = Visibility.Visible;
+            ((TextBlock)Global.GamePage.FindName($"AnimalInfoBox{slot}")).Text = $"Name: {NameBox.Text}\r\nAge: {AgeSlider.Value}";
         }
 
         private void NameBox_TextChanged(object sender, TextChangedEventArgs e)

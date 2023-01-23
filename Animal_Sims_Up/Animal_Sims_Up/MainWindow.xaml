@@ -37,7 +37,16 @@
             </LinearGradientBrush>
         </Border.Background>
         <Grid>
-            <Button x:Name="Game"
+            <Grid Height="40"
+                  VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="Game"
+                        Grid.Column="0"
                     Style="{StaticResource RoundedButtonStyle}"
                     Width="50"
                     Height="40"
@@ -46,26 +55,101 @@
                     Click="Game_Click"
                     Background="#10279C"
                     BorderBrush="#041A87">
-                <Image Source="/home.png"/>
-            </Button>
-            <Button x:Name="Shop"
+                    <Image Source="/home.png"/>
+                </Button>
+                <Button x:Name="Shop"
+                        Grid.Column="1"
                     Style="{StaticResource RoundedButtonStyle}"
                     Width="50"
                     Height="40"
-                    Margin="55,0,0,0"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Click="Game_Click"
+                    Click="Shop_Click"
                     Background="#10A59C"
                     BorderBrush="#041A87">
-                <Image Source="/shop.png"
-                       Margin="3"/>
-            </Button>
-
-            <Button x:Name="CloseButton"
+                    <Image Source="/shop.png"
+                           Margin="3"/>
+                </Button>
+                <Border BorderBrush="White"
+                        Grid.Column="2"
+                        Height="40"
+                        Margin="10,0,10,0"
+                        CornerRadius="5"
+                        BorderThickness="2">
+                    <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="FishAmount"
+                               HorizontalAlignment="Left"
+                               Margin="5,0,0,0"
+                               TextAlignment="Left"
+                               FontSize="25"
+                               Foreground="White"
+                               Text="Fish: 0"/>
+                        <Rectangle Fill="White"
+                                   Width="2"
+                                   Margin="10,0,0,0"/>
+                        <TextBlock x:Name="BeefAmount"
+                               HorizontalAlignment="Left"
+                               Margin="10,0,0,0"
+                               TextAlignment="Left"
+                               FontSize="25"
+                               Foreground="DarkRed"
+                               Text="Beef: 0"/>
+                        <Rectangle Fill="White"
+                                   Width="2"
+                                   Margin="10,0,0,0"/>
+                        <TextBlock x:Name="BananaAmount"
+                               HorizontalAlignment="Left"
+                               Margin="10,0,0,0"
+                               TextAlignment="Left"
+                               FontSize="25"
+                               Foreground="Yellow"
+                               Text="Banana: 0"/>
+                        <Rectangle Fill="White"
+                                   Width="2"
+                                   Margin="10,0,0,0"/>
+                        <TextBlock x:Name="WheatAmount"
+                               HorizontalAlignment="Left"
+                               Margin="10,0,0,0"
+                               TextAlignment="Left"
+                               FontSize="25"
+                               Foreground="Orange"
+                               Text="Wheat: 0"/>
+                        <Rectangle Fill="White"
+                                   Width="2"
+                                   Margin="10,0,0,0"/>
+                        <TextBlock x:Name="LeafAmount"
+                               HorizontalAlignment="Left"
+                               Margin="10,0,0,0"
+                               TextAlignment="Left"
+                               FontSize="25"
+                               Foreground="Green"
+                               Text="Leaf: 0"/>
+                        <Rectangle Fill="White"
+                                   Width="2"
+                                   Margin="10,0,0,0"/>
+                        <TextBlock x:Name="WaterAmount"
+                               HorizontalAlignment="Left"
+                               Margin="10,0,0,0"
+                               TextAlignment="Left"
+                               FontSize="25"
+                               Foreground="Cyan"
+                               Text="Water: 0"/>
+                        <Rectangle Fill="White"
+                                   Width="2"
+                                   Margin="10,0,0,0"/>
+                        <TextBlock x:Name="CurrencyAmount"
+                               HorizontalAlignment="Left"
+                               Margin="10,0,0,0"
+                               TextAlignment="Left"
+                               FontSize="25"
+                               Foreground="DimGray"
+                               Text="Currency: 0"/>
+                    </StackPanel>
+                </Border>
+                <Button x:Name="CloseButton"
+                    Grid.Column="10"
                     Style="{StaticResource RoundedButtonStyle}"
                     HorizontalAlignment="Right"
-                    VerticalAlignment="Top"
                     Width="40"
                     Height="40"
                     Foreground="White"
@@ -75,6 +159,7 @@
                     FontFamily="Arial Rounded MT Bold"
                     FontSize="30"
                     Click="CloseButton_Click"/>
+            </Grid>
 
             <Frame x:Name="NavigationFrame"
                    Margin="0,40,0,0"
